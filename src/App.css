@@ -1,22 +1,84 @@
-.App {
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.4;
+  background: #f39c12;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+.container {
+  width: 50%;
+  margin: auto;
+  position: relative;
+  top: 15em;
+}
+
+header {
+  color: white;
   text-align: center;
+  font-size: 5em;
 }
 
-.App-logo {
-  height: 40vmin;
+
+.delete-btn {
+  background: red;
+  border-radius: 50%;
+  padding: 7px 14px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 25px;
+  float: right;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.submit-btn {
+  flex: 1;
+  font-size: 20px;
+  border: none;
+  border-radius: 0px 5px 5px 0px;
+}
+
+.submit-btn:hover {
+  background: #d35400;
   color: white;
 }
 
-.App-link {
-  color: #09d3ac;
+.add-todo-input {
+  flex: 10;
+  font-size: 30px;
+  padding: 5px;
+  border: none;
+  border-radius: 5px 0px 0px 5px;
+}
+
+form {
+  display: flex;
+}
+
+input[type='checkbox'] {
+  -webkit-appearance:none;
+  width:30px;
+  height:30px;
+  background:white;
+  border-radius:5px;
+  border:2px solid #555;
+  vertical-align: middle;
+  margin: 10px;
+}
+
+input[type='checkbox']:checked {
+  background: #c0392b;
+}
+
+p {
+  font-size: 2em;
 }
