@@ -5,7 +5,7 @@ class TodoItem extends Component {
     getStyle = () => {
       return {
            textDecoration: this.props.todo.completed ? 'line-through' : 'none',
-           background: 'pink',
+           background: '#f1c40f',
            padding: '10px',
            borderBottom: '1px black dotted'
       }
@@ -16,8 +16,9 @@ class TodoItem extends Component {
         return (
             <div style={this.getStyle()}>
               <p>
-                <input type='checkbox' onChange={this.props.markComplete.bind(this, id)} />
+                <input className='checkbox' type='checkbox' onChange={this.props.markComplete.bind(this, id)} />
                 { title }
+                <button className='delete-btn' onClick={this.props.deleteButton.bind(this, id)}>X</button>
               </p>
             </div>
         )

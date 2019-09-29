@@ -7,9 +7,78 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.4;
+  background: #f39c12;
 }
 
 a {
   color: #333;
   text-decoration: none;
+}
+
+.container {
+  width: 50%;
+  margin: auto;
+  position: relative;
+  top: 15em;
+}
+
+header {
+  color: white;
+  text-align: center;
+  font-size: 5em;
+}
+
+
+.delete-btn {
+  background: red;
+  border-radius: 50%;
+  padding: 7px 14px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 25px;
+  float: right;
+}
+
+.submit-btn {
+  flex: 1;
+  font-size: 20px;
+  border: none;
+  border-radius: 0px 5px 5px 0px;
+}
+
+.submit-btn:hover {
+  background: #d35400;
+  color: white;
+}
+
+.add-todo-input {
+  flex: 10;
+  font-size: 30px;
+  padding: 5px;
+  border: none;
+  border-radius: 5px 0px 0px 5px;
+}
+
+form {
+  display: flex;
+}
+
+input[type='checkbox'] {
+  -webkit-appearance:none;
+  width:30px;
+  height:30px;
+  background:white;
+  border-radius:5px;
+  border:2px solid #555;
+  vertical-align: middle;
+  margin: 10px;
+}
+
+input[type='checkbox']:checked {
+  background: #c0392b;
+}
+
+p {
+  font-size: 2em;
 }
