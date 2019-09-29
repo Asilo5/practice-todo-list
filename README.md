@@ -1,7 +1,7 @@
 # React Todo List 
 
 Todo List is a React practice project, where a user can add a todo, check off the todo, as well as delete the todo.
-To make this app I watched [Traversy Media 'React JS Crash Course](https://www.youtube.com/watch?v=sBws8MSXN7A). The simple styling was done by me.
+To make this app I watched [Traversy Media 'React JS Crash Course'](https://www.youtube.com/watch?v=sBws8MSXN7A). The simple styling was done by me.
 
 ## Created by:
 [Amanda Consuelo Sierra](https://github.com/Asilo5)
