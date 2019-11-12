@@ -6,7 +6,7 @@ import AddTodo from './AddTodo/AddTodo';
 
 class App extends Component {
   state = {
-    todos: []
+    todos: [] 
   }
 
    // Toggle Complete
