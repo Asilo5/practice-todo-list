@@ -24,4 +24,5 @@ Todo List was built using:
   
 ## Giph of Todo List
 
-![giph coming soon! ]()
+![main page](https://github.com/Asilo5/practice-todo-list/blob/master/Screenshot%202019-11-12%20at%2012.14.30.png)
+![todos added](https://github.com/Asilo5/practice-todo-list/blob/master/Screenshot%202019-11-12%20at%2012.15.36.png)
