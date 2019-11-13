@@ -3,50 +3,32 @@ import './App.css';
 import Todos from './Todos/Todos';
 import Header from './Layout/Header';
 import AddTodo from './AddTodo/AddTodo';
+import { connect } from 'react-redux';
+import { markComplete, deleteTodo } from './actions';
+import { bindActionCreators } from 'redux';
 
-class App extends Component {
-  state = {
-    todos: []
+class App extends Component{
+
+  toggleCheck = (id) => {
+    const { markComplete } = this.props;
+    markComplete(id);
   }
 
-   // Toggle Complete
-  markComplete = (id) => {
-    this.setState({todos: this.state.todos.map((todo) => {
-       if (todo.id === id) {
-         todo.completed = !todo.completed;
-       }
-       return todo;
-      }) 
-    })
+  deleteBtn = (id) => {
+    const { deleteTodo } = this.props;
+    deleteTodo(id);
   }
 
-  // Delete Todo button
-  deleteButton = (id) => {
-   // if the id matches the ones in the array
-   // only return the ids that do not match
-    this.setState({ todos: [...this.state.todos.filter((todo) => todo.id !== id)]})
-  }
-
-  // Add new Todo
-  addTodo = (title) => {
-    const newTodo = {
-      id: this.state.todos.length + 1,
-      title,
-      completed: false
-    }
-    this.setState({ todos: [...this.state.todos, newTodo]})
-  }
 
   render() {
     return (
       <section className='App'>
         <section className='container'>
           <Header />
-          <AddTodo addTodo={this.addTodo}/>
+          <AddTodo />
           <Todos 
-            todos={this.state.todos} 
-            markComplete={this.markComplete} 
-            deleteButton={this.deleteButton}
+          toggleCheck={this.toggleCheck}
+          deleteBtn={this.deleteBtn}
           />
         </section>
       </section>
@@ -54,4 +36,11 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapDispatchToProps = (dispatch) => (
+  bindActionCreators({
+    markComplete,
+    deleteTodo
+  }, dispatch)
+)
+
+export default connect(null, mapDispatchToProps)(App);
