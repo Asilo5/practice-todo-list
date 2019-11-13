@@ -1,14 +1,21 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { addTodo } from '../actions';
+import { bindActionCreators } from 'redux';
 
-class AddTodo extends Component {
-  state = {
-    title: '' 
+export class AddTodo extends Component {
+  constructor() {
+    super();
+    this.state = {
+      title: '' 
+    }
   }
 
   onSubmit = (e) => {
     e.preventDefault();
-    this.props.addTodo(this.state.title);
-    this.setState({ title: ''})
+    const { addTodo } = this.props;
+    addTodo(this.state.title);
+    this.setState({ title: ''});
   }
 
   onChange = (e) => this.setState({ [e.target.name] : e.target.value });
@@ -34,4 +41,10 @@ class AddTodo extends Component {
   }
 }
 
-export default AddTodo;
+const mapDispatchToProps = (dispatch) => (
+  bindActionCreators({
+    addTodo
+  }, dispatch)
+)
+
+export default connect(null, mapDispatchToProps)(AddTodo);

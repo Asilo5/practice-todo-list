@@ -1,6 +1,6 @@
-export const markComplete = (id) => ({
+export const markComplete = (markId) => ({
    type: 'MARK_COMPLETE',
-   id
+   markId
 });
 
 export const deleteTodo = (id) => ({
