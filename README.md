@@ -21,6 +21,7 @@ You will be taken to ``` http://localhost:3000 ``` to be able to view in browser
 
 Todo List was built using:
   - React
+  - Redux
   
 ## Giph of Todo List
 
